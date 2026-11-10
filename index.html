@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js" defer></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Falling Roses -->
+<div id="rose-container"></div>
+
+<!-- Floating Hearts -->
+<div id="heart-container"></div>
+
+<!-- LOGIN SCREEN -->
+<div class="login-page" id="loginPage">
+
+<div class="glass login-card">
+
+<h1>❤️Secret Surprise❤️</h1>
+
+<p>Password daalo khadoos!</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter password"
+/>
+
+<button id="unlockBtn">
+Unlock My Surprise ✨
+</button>
+
+<p id="error"></p>
+
+</div>
+
+</div>
+
+
+<!-- MAIN WEBSITE -->
+
+<div id="mainContent" class="hidden">
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="glass hero-content">
+
+<h1 class="glow">
+Happy Birthday My Love ❤️
+</h1>
+
+<h3 id="typing-text"></h3>
+
+<p>
+
+Roz roz to mai tmse ldte jhgte hi rhti hu...
+
+Isliye aaj maine socha kuch alg krti hu. 🤭❤️
+
+Aaj ke liye gussa side rkh deti hu...
+
+Aur tmhe wo sab dikhaati hu
+
+jo shayad main roz lafzon me nahi keh paati. 🫂❤️
+
+Chalo...
+
+Aaj tumhe mera pyaar dikhaati hoon. 🌹❤️
+
+</p>
+
+<div class="hero-buttons">
+
+
+<button onclick="scrollToLetter()">
+💌 Read Messages
+</button>
+
+<button onclick="scrollToGift()">
+🎁 Open Gift
+</button>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="upgrade-hero">
+
+<div class="glass countdown-card">
+
+    <h2>🎂 Khadoos Upgrade Center 🎂</h2>
+
+    <div id="ageCounter">23</div>
+
+    <p id="ageText">
+        Ready for upgrade? 😏❤️
+    </p>
+
+    <button id="ageBtn">
+        🚀 Upgrade Now
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- LOVE LETTER SECTION -->
+
+<section id="letter" class="section">
+
+<div class="glass card">
+
+<h2>💌 میری جان کے نام</h2>
+
+<p>
+میری جان... 🫂❤️
+</p>
+کبھی کبھی مجھے یقین ہی نہیں آتا کہ ہم نے محبت کا اتنا لمبا سفر طے کر لیا...
+
+نو سال... 🥹❤️
+
+پورے نو سال...
+
+نو سال کی باتیں... 📱❤️
+
+نو سال کا انتظار... 🫂💔
+
+نو سال کی دعائیں... 🤲❤️
+
+نو سال کی ہنسی... 😊❤️
+
+نو سال کے آنسو... 😭❤️
+
+نو سال کی محبت... ❤️
+
+اتنا وقت گزر گیا مگر آج بھی میرے دل میں تمہارے لیے وہی بےچینی، وہی محبت، اور وہی احساس موجود ہے جو پہلے دن تھا... 🥹❤️
+<p>
+لوگ کہتے ہیں وقت بدل دیتا ہے...
+
+مگر لگتا ہے وقت ہماری محبت کو بدلنا ہی بھول گیا... ❤️
+
+میری جان...
+
+لانگ ڈسٹنس واقعی بہت مشکل ہوتا ہے... 💔
+
+کبھی دل چاہتا ہے کہ تمہارے پاس بیٹھ کر تم سے بےشمار باتیں کروں...
+
+کبھی دل چاہتا ہے کہ بغیر کسی وجہ کے تمہیں گھنٹوں گلے لگائے رکھوں... 🫂❤️
+
+کبھی دل چاہتا ہے کہ جب تم اداس ہو تو تمہارے پاس بیٹھ کر تمہارا ہاتھ تھام لوں...
+
+مگر پھر حقیقت یاد آ جاتی ہے...
+
+اور یہ احساس کہ جس شخص کو میں دنیا میں سب سے زیادہ چاہتی ہوں وہ مجھ سے اتنی دور ہے... 😭💔
+
+بہت دفعہ ایسا ہوا کہ میں روئی...
+
+اور تم میرے آنسو پونچھ بھی نہ سکے...
+
+بہت دفعہ ایسا ہوا کہ تم پریشان تھے...
+
+اور میں تمہیں صرف الفاظ کے ذریعے تسلی دے سکی... 🥺
+
+مگر ایک بات جانتے ہو؟
+
+فاصلے نے ہمیں کمزور نہیں کیا...
+
+فاصلے نے مجھے تمہاری اہمیت سمجھائی ہے... ❤️
+
+اس نے مجھے سکھایا ہے کہ محبت صرف ساتھ رہنے کا نام نہیں...
+
+محبت انتظار کا نام بھی ہے...
+
+صبر کا نام بھی ہے...
+
+اور ہر دن ایک ہی شخص کو پہلے سے زیادہ چاہنے کا نام بھی ہے... 🫂❤️
+
+جانتے ہو؟
+
+میری زندگی کی سب سے خوبصورت بات تم ہو...
+
+میں نے زندگی میں بہت لوگوں کو آتے جاتے دیکھا...
+
+مگر تم وہ شخص بن گئے جس کے بغیر اب میری ہر خوشی ادھوری لگتی ہے... 🥹❤️
+
+جب میں خوش ہوتی ہوں تو دل چاہتا ہے سب سے پہلے تمہیں بتاؤں...
+
+جب میں پریشان ہوتی ہوں تو دل چاہتا ہے صرف تم سے بات کروں...
+
+جب میں دعا مانگتی ہوں تو تمہارا نام بغیر چاہے میری زبان پر آ جاتا ہے... 🤲❤️
+
+تم صرف میری محبت نہیں ہو...
+
+تم میری عادت ہو...
+
+میرا سکون ہو...
+
+میرا یقین ہو...
+
+میری دعا ہو...
+
+اور میرے دل کا وہ حصہ ہو جسے میں کبھی کھونا نہیں چاہتی... 🫂❤️
+
+تم نے شاید کبھی محسوس نہ کیا ہو...
+
+مگر میری بہت سی خاموشیوں کو تم نے سمجھا ہے...
+
+میرے بہت سے ٹوٹے ہوئے دنوں کو تم نے سنبھالا ہے...
+
+جب پوری دنیا غلط لگتی تھی تب بھی تم صحیح لگتے تھے... 🥹❤️
+
+جب میں خود پر یقین کھو دیتی تھی تب تم مجھ پر یقین رکھتے تھے...
+
+اور شاید یہی وجہ ہے کہ میں اللہ کا جتنا شکر ادا کروں کم ہے کہ اس نے مجھے تم جیسا انسان دیا... 🤲❤️
+
+کبھی کبھی میں سوچتی ہوں...
+
+اگر کسی دن میری زندگی کی تمام خوبصورت یادوں کو ایک جگہ جمع کیا جائے...
+
+تو ان میں سے زیادہ تر یادوں میں تم شامل ہوگے... ❤️
+
+تمہاری ہنسی...
+
+تمہاری باتیں...
+
+تمہارا خیال رکھنا...
+
+تمہارا میرا ساتھ دینا...
+
+یہ سب میرے دل کے سب سے محفوظ اور خوبصورت حصے میں محفوظ ہے... 🥹🫂❤️
+
+میری جان...
+
+آج تمہاری سالگرہ پر میری صرف ایک دعا ہے...
+
+اللہ تمہیں ہر وہ خوشی دے جس کے تم حقدار ہو... 🤲❤️
+
+تمہارے خواب پورے ہوں...
+
+تمہاری ہر تھکاوٹ خوشی میں بدل جائے...
+
+تمہارے راستے آسان ہوں...
+
+اور تمہاری آنکھوں میں کبھی آنسو نہ آئیں... 🌹❤️
+
+اور اگر کبھی آئیں بھی...
+
+تو وہ خوشی کے آنسو ہوں... 🥹❤️
+
+میں نہیں جانتی زندگی ہمیں کہاں لے جائے گی...
+
+لیکن اتنا ضرور جانتی ہوں کہ نو سال گزرنے کے بعد بھی میرا دل آج تک تمہارا ہے... ❤️
+
+اور شاید ہمیشہ رہے گا... 🫂❤️
+
+اگر مجھے دوبارہ زندگی ملے...
+
+اگر مجھے دوبارہ محبت کرنے کا موقع ملے...
+
+اگر مجھے دوبارہ کسی ایک شخص کو چننا ہو...
+
+تو میں ہر بار...
+
+ہر زندگی میں...
+
+ہر دنیا میں...
+
+صرف تمہیں چنوں گی... ❤️😭🫂
+
+سالگرہ مبارک ہو میری جان... 🎂❤️
+
+شکریہ...
+
+میری زندگی میں آنے کے لیے... ❤️
+
+شکریہ...
+
+اتنے سال میرا ساتھ نبھانے کے لیے... 🫂❤️
+
+شکریہ...
+
+مجھے اتنا پیار دینے کے لیے کہ میں خود کو دنیا کی خوش نصیب ترین لڑکی محسوس کروں... 🥹❤️
+
+اور سب سے بڑھ کر...
+
+شکریہ اس بات کا کہ نو سال بعد بھی تم میرے دل کی سب سے خوبصورت دھڑکن ہو... 💓❤️
+
+میں تم سے بےحد محبت کرتی ہوں...
+
+الفاظ سے زیادہ...
+
+فاصلے سے زیادہ...
+
+وقت سے زیادہ...
+
+اور شاید خود سے بھی زیادہ... 🫂😭❤️
+
+سالگرہ مبارک ہو میری دنیا... 🌍❤️
+
+
+</p>
+
+<h2>
+ہمیشہ اور ہمیشہ تمہاری，
+<br>
+شفا 🫣❤️🌹
+</h2>
+
+</div>
+
+</section>
+<section id="secretGiftSection" class="section">
+
+    <div class="glass gift-card">
+
+        <h2>🎁 Secret Birthday Gift 🎁</h2>
+
+        <div class="loader-circle" id="giftLoader">
+            🎁
+        </div>
+
+        <div id="giftRevealContent">
+
+            <p id="giftRevealMessage">
+
+                Khdoos... 😌❤️
+
+                <br><br>
+
+                Maine tumhare liye ek special birthday gift rakha hai.
+
+                <br><br>
+
+                Dekhna chahoge? 🤭❤️
+
+            </p>
+
+            <button id="giftNextBtn">
+                🎁 Open Gift
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GIFT SECTION -->
+
+<section id="giftSection" class="section">
+
+<div class="glass gift-card">
+
+<h2>💌 Kuch Khaas Batein 💌</h2>
+
+<div class="gift-box" id="giftBox">
+💌 
+</div>
+
+<p id="giftMessage" class="hidden">
+You are the best thing that has ever happened
+to me ❤️
+<br><br>
+Happy Birthday My Love 🌹
+</p>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<h2 class="section-title">
+📸 Our Memories
+</h2>
+
+<div class="gallery">
+
+<figure class="memory-card">
+    <img src="images/photo1.jpeg" alt="A favorite memory together" loading="lazy">
+    <figcaption>A moment to remember ✨</figcaption>
+</figure>
+
+<figure class="memory-card">
+    <img src="images/photo2.jpeg" alt="A happy memory together" loading="lazy">
+    <figcaption>One of my favorite days ❤️</figcaption>
+</figure>
+
+<figure class="memory-card">
+    <img src="images/photo3.jpeg" alt="A special moment together" loading="lazy">
+    <figcaption>Us, being us 🫂</figcaption>
+</figure>
+
+<figure class="memory-card">
+    <img src="images/photo4.jpeg" alt="A memory to cherish together" loading="lazy">
+    <figcaption>A little piece of forever 🌹</figcaption>
+</figure>
+
+</div>
+
+</section>
+
+<!-- CAKE -->
+
+<section class="section">
+
+<div class="glass cake-card">
+
+<h2>🎂 Birthday Cake 🎂</h2>
+
+<div class="cake">
+🎂
+</div>
+
+<button id="wishBtn">
+🕯️ Blow Candle
+</button>
+
+<p id="wishMessage">
+✨ Make a Wish ✨
+</p>
+
+</div>
+
+</section>
+
+<!-- FINAL MESSAGE -->
+
+<section class="section">
+
+<div class="glass final-card">
+
+<h1>❤️ Happy Birthday Mera Bccha❤️</h1>
+
+<p>
+تمہیں شاید کبھی اندازہ نہ ہو کہ تم میری زندگی میں کتنی اہمیت رکھتے ہو۔
+
+تمہاری موجودگی نے میرے دل کے ان حصوں کو بھی زندہ کیا
+جنہیں میں ہمیشہ کے لیے خاموش سمجھ بیٹھی تھی۔
+
+اگر میری زندگی کے تمام خوبصورت لمحوں کو ایک جگہ جمع کیا جائے،
+تو ان میں زیادہ تر لمحے وہ ہوں گے
+جن میں تم شامل ہو۔
+
+سالگرہ مبارک ہو میری جان ❤️
+
+میری دعا ہے کہ تمہاری زندگی ہمیشہ محبت،
+سکون، کامیابی اور خوشیوں سے بھری رہے۔
+
+اور اگر کبھی تمہیں لگے کہ پوری دنیا تمہارے خلاف ہے，
+تو یاد رکھنا...
+ایک دل ہمیشہ تمہارے ساتھ دھڑکتا رہے گا🫂۔ ❤️🌹
+</p>
+
+<h2>
+I Love You Bhut Saraaaaa naa 🫂😘
+</h2>
+
+<button id="celebrateBtn">
+🎆 Celebrate
+</button>
+
+</div>
+
+</section>
+
+<!-- FIREWORKS CANVAS -->
+
+<canvas id="fireworks"></canvas>
+
+<!-- AUDIO -->
+
+<audio id="birthdayMusic" loop>
+    <source src="raabta.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<script>
+
+function scrollToLetter(){
+document.getElementById('letter')
+.scrollIntoView({
+behavior:'smooth'
+});
+}
+
+function scrollToGift(){
+document.getElementById('secretGiftSection')
+.scrollIntoView({
+behavior:'smooth'
+});
+}
+
+</script>
+
+</body>
+</html>
